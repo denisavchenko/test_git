@@ -1,0 +1,100 @@
+:root {
+    --base-size: 250px; /* Эталонный размер */
+  }
+  
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    position: relative;
+    overflow-x: hidden; /* Запрещаем горизонтальную прокрутку */
+  }
+  
+  .background {
+    position: absolute;
+    width: 100%;
+    height: 1200px; /* Увеличиваем высоту для скролла */
+    overflow: visible;
+    z-index: 1;
+  }
+  
+  .mountain {
+    position: absolute;
+    width: var(--base-size);
+    height: var(--base-size);
+    border-radius: 20px;
+    overflow: hidden; /* Обрезка содержимого */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    opacity: 0.8;
+  }
+  
+  .mountain img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Картинка обрезается, чтобы заполнить контейнер */
+  }
+  
+  .size-100 {
+    transform: scale(1); /* 100% от базового размера */
+  }
+  
+  .size-90 {
+    transform: scale(0.9); /* 90% от базового размера */
+  }
+  
+  .size-80 {
+    transform: scale(0.8); /* 80% от базового размера */
+  }
+  
+  .size-70 {
+    transform: scale(0.7); /* 70% от базового размера */
+  }
+  
+  .size-60 {
+    transform: scale(0.6); /* 60% от базового размера */
+  }
+  
+  /* Позиционирование в пикселях */
+  .mountain:nth-child(1) {
+    top: 400px;
+    left: 100px;
+  }
+  
+  .mountain:nth-child(2) {
+    top: 100px;
+    left: 200px;
+  }
+  
+  .mountain:nth-child(3) {
+    top: 100px;
+    right: 150px;
+  }
+  
+  .mountain:nth-child(4) {
+    top: 250px;
+    left: 600px;
+  }
+  
+  .mountain:nth-child(5) {
+    bottom: 50px;
+    right: 0px;
+  }
+  
+  .content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    color: #000;
+    padding-top: 50px;
+  }
+  
+  .content h1 {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .content p {
+    font-size: 1.2rem;
+    margin: 0.5rem 0;
+  }
+  
